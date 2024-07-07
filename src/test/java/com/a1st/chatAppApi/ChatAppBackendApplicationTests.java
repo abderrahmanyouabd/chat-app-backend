@@ -1,4 +1,4 @@
-package com.a1st.chat_app_backend;
+package com.a1st.chatAppApi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
