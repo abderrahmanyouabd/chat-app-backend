@@ -1,6 +1,7 @@
 package com.a1st.chatAppApi.common.error.infrastructure.primary;
 
-import org.hibernate.exception.ConstraintViolationException;
+import jakarta.validation.ConstraintViolation;
+import jakarta.validation.ConstraintViolationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.Ordered;
@@ -10,8 +11,10 @@ import org.springframework.http.ProblemDetail;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.validation.FieldError;
 
 import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /**
@@ -77,3 +80,4 @@ class BeanValidationErrorsHandler {
             return propertyPath.substring(propertyPath.lastIndexOf(".") + 1);
         };
     }
+}
