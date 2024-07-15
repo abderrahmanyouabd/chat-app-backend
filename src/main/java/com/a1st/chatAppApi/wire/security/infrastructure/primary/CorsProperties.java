@@ -18,7 +18,7 @@ public class CorsProperties {
         final CorsConfiguration corsConfiguration = new CorsConfiguration();
         corsConfiguration.setAllowCredentials(true);
         corsConfiguration.addAllowedHeader("*");
-        corsConfiguration.addAllowedMethod("*"); //todo: to be checked later I might have an issue.
+        corsConfiguration.addAllowedMethod("*"); //todo: to be checked later I might have an issue after deployment.
         return corsConfiguration;
     }
 }
